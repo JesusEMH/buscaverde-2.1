@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans');
+
+*{
+	margin:0px;
+	padding:0px;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: content-box;
+}
+:root{
+	--colorfondo: #CDD1D1;
+	--fondosecundario: #eceded;
+	--fondosecundario-hsla: hsla(180, 0%, 93%, .6);
+	--verdeheader: #87ecad;
+	--verdeheader-hover: #7ddab6;
+	--bordeheader: #90c69a;
+	--center: center;
+	--botoncolor: #e3ac95;
+	--botonletra: #7e2e2e;
+	--botonletra-hover: #efad92;
+	--botonhover: #CD5C5C;
+	--colorletra: #4c463b;
+	--fondosecundario-hover: #d9dede;
+	--bannergradient: linear-gradient(160deg, #cdd1d1 0%, #88cfa0 100%);
+	--gradient-naranja: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+	--fondonuevo: linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+	--colorazul: #7fb3d5;
+
+}
+
