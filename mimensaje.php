@@ -1,32 +1,43 @@
 <?php require_once './includes/cabecera.php' ?>
 
-<div class="feed">
+<?php if(isset($_SESSION['usuario'])) : ?>
 
-<?php require_once './includes/aside-feed.php' ?>
+	<div class="feed">
 
-	<main class="mensaje-recibido" >
+	<div class="feed-header">Panel de control de <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></div>
+
+	<?php require_once './includes/aside-feed.php' ?>
+
+		<main class="mensaje-recibido" >
 
 
-		
-<p class="feed-titulo">BANDEJA DE ENTRADA DE <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></p>
+			
+	<p class="feed-titulo">BANDEJA DE ENTRADA DE <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></p>
 
-<?php
-		$mensajes = mostrarMensaje($db, $_GET['id']);
-		if (!empty($mensajes)) : 
-		while ($mensaje = mysqli_fetch_assoc($mensajes)) :
+	<?php
+			$mensajes = mostrarMensaje($db, $_GET['id']);
+			if (!empty($mensajes)) : 
+			while ($mensaje = mysqli_fetch_assoc($mensajes)) :
+		?>
+
+	<div class="mensaje-contenido">
+		<p> <?= $mensaje['titulo'] ?></p>
+		<p> <?= $mensaje['fecha'] ?> </p>
+		<p><?= $mensaje['mensaje'] ?></p>
+	</div>
+	<?php
+	endwhile;
+	endif;
 	?>
 
-<div class="mensaje-contenido">
-	<p> <?= $mensaje['titulo'] ?></p>
-	<p> <?= $mensaje['fecha'] ?> </p>
-	<p><?= $mensaje['mensaje'] ?></p>
-</div>
-<?php
-endwhile;
-endif;
-?>
+		</main>
+	<?php require_once 'includes/aside-tareas.php' ?>
+	</div>
+	<?php require_once 'includes/footer.php' ?>
 
-	</main>
-<?php require_once 'includes/aside-tareas.php' ?>
-</div>
-<?php require_once 'includes/footer.php' ?>
+<?php 
+	else : 
+		header('Location: ./index.php');
+ endif; 
+
+ ?>

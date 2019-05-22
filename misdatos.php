@@ -1,15 +1,16 @@
+
 <?php require_once './includes/cabecera.php' ?>
 
+<?php if(isset($_SESSION['usuario'])) : ?>
+	
 <div class="feed">
+	<div class="feed-header">Panel de control de <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></div>
 
 <?php require_once './includes/aside-feed.php' ?>
 
-	<main class="feed-agregar-articulo" >
+	<main class="feed-misdatos" >
 		<?php
 		if(isset($_SESSION['usuario'])) :?>
-
-		
-		<p class="feed-titulo">PANEL DE CONTROL DE <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></p>
 		
 		<?php require_once './includes/misdatos-form.php' ?>
 
@@ -25,3 +26,10 @@
 <?php require_once 'includes/aside-tareas.php' ?>
 </div>
 <?php require_once 'includes/footer.php' ?>
+
+<?php 
+	else : 
+		header('Location: ./index.php');
+ endif; 
+
+ ?>

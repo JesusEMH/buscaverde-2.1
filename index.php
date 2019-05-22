@@ -38,7 +38,7 @@
 	<aside class="asideuno"></aside>
 
 	<main class="main" >
-		<h2 class="titulo-banner">QUE AREA VERDE BUSCO?</h2>
+		<h2 class="subtitulo-banner">QUE AREA VERDE BUSCO?</h2>
 
 		<div class="selecciona">
 

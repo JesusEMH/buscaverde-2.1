@@ -14,7 +14,7 @@
 
 	<?php endif; ?>
 
-		<h2 class="titulo">TU INFORMACION PERSONAL</h2>
+		<h2 class="titulo-datos">TU INFORMACION PERSONAL</h2>
 			<form method="POST" action="php/actualizar-usuario.php" class="datos-form">
 
 			<label class="label-registro" for="name">NOMBRE: </label>

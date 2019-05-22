@@ -10,6 +10,7 @@ if(isset($_POST)){
 
 	$calle = isset($_POST['calle']) ? mysqli_real_escape_string($db, $_POST['calle']) : false;
 
+	
 	$colonia = isset($_POST['colonia']) ? (int)$_POST['colonia'] : false;
 
 	$codigopostal = isset($_POST['codigopostal']) ? (int)$_POST['codigopostal'] : false;
@@ -57,7 +58,6 @@ if(isset($_POST)){
 		$errores['contacto'] = 'El correo de contacto no es válido';
 	}
 
-	
 	if(count($errores) == 0){
 		$entrada_id = $_GET['id'];
 		
@@ -66,18 +66,12 @@ if(isset($_POST)){
 
 			
 		$guardar = mysqli_query($db, $sql);
-
-		header("Location: ../index.php");
+	
+		header("Location: ../articulo.php?id=$entrada_id");
 	}else{
-
-		$_SESSION["errores_entrada"] = $errores;
-		
-		if(isset($_GET['editar'])){
-			header("Location: ../editar-entrada.php?id=".$_GET['editar']);
-		}else{
-			header("Location: ../crear-entrada.php");
-		}
+		header("Location: ../index.php");
 	}
 	
 }
 
+?>

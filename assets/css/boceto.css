@@ -5,7 +5,7 @@
 	padding:0px;
 	text-decoration: none;
 	list-style: none;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 :root{
 	--colorfondo: #CDD1D1;
@@ -23,6 +23,7 @@
 	--fondosecundario-hover: #d9dede;
 	--bannergradient: linear-gradient(160deg, #cdd1d1 0%, #88cfa0 100%);
 	--gradient-naranja: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+	--gradient-verde: linear-gradient(0deg, #28ea89 0%, #2AF598 100%);
 	--fondonuevo: linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
 	--colorazul: #7fb3d5;
 

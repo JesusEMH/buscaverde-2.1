@@ -1,9 +1,7 @@
+<?php require_once 'includes/cabecera.php'; ?>	
+	<?php if(isset($_SESSION['usuario'])) : ?>
 
-<?php require_once './includes/cabecera.php' ?>
-
-<?php if(isset($_SESSION['usuario'])) : ?>
-
-	<div class="feed">
+		<div class="feed">
 		<div class="feed-header">Panel de control de <?= $_SESSION['usuario']['nombre']?> <?=$_SESSION['usuario']['apellido'] ?></div>
 
 	<?php require_once './includes/aside-feed.php' ?>
@@ -14,7 +12,7 @@
 
 			
 			
-			<?php require_once './includes/formulario-entrada.php' ?>
+			<?php require_once './includes/nuevo-usuario.php' ?>
 
 
 			<?php else:?>

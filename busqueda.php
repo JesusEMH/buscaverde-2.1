@@ -5,7 +5,7 @@
 ?>
 
 <?php require_once 'includes/cabecera.php'; ?>
-<div class="body">
+<div class="bodytres">
 	<aside class="asideuno"></aside>
 	<main class="main">
 		<h2 class="titulo-banner">RESULTADOS DE LA BUSQUEDA <?php echo $_GET['buscar']; ?></h2>

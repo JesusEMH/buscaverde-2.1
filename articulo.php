@@ -23,12 +23,14 @@
 		<p class="zona-direccion">CREADO POR USUARIO: <?=$entrada_actual['usuario']?> (<?=$entrada_actual['contacto']?>)</p>
 
 		<?php if(isset($_SESSION['usuario'])):?>
-		<div>Deseas actualizar los datos? <a  class="boton" href="editar-entrada.php?id=<?=$entrada_actual['id']?>">ACTUALIZAR</a></div>
-		<div>O borrar el area verde! <a class="boton" href="php/borrar-entrada.php?id=<?=$entrada_actual['id']?>">BORRAR</a></div>
+		<div class="zona-caja-actualizar">
+				<div class="zona-actualizar"><a  class="boton" href="editar-entrada.php?id=<?=$entrada_actual['id']?>">ACTUALIZAR DATOS</a></div>
+				<div class="zona-actualizar"><a class="boton" href="php/borrar-entrada.php?id=<?=$entrada_actual['id']?>">BORRAR TODO</a></div>
+				</div>
 		</div>
 		<?php else:?>
-			<div>hola</div>
-			<div>hola</div>
+			<div class="zona-alerta">inicia sesion para que puedas actualizar esta informacion.</div>
+			<div class="zona-alerta">inicia sesion para borrar esta informacion.</div>
 		<?php endif;?>
 
 	</article>

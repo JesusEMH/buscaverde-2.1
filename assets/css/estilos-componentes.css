@@ -1,4 +1,4 @@
-
+/*BUSCADOR DEL MENU*/
 .input{
 	width: 38em;
 	height: 2.5em;
@@ -7,24 +7,48 @@
 	padding-left: 1em;
 	font-size: 1em;
 	margin-top: .6em;
+	border-radius: 20px;
 
 }
 
 .input:focus{
 	background: #bee4df;
 	border: 1px solid #90cec6;
+	transition: .3s;
 
 
 }
 
+@media (max-width: 1400px) {
+  .input {
+  	width: 27em;
+  }
+}
 
+@media (max-width: 1160px) {
+  .input {
+  	width: 20em;
+  }
+}
+
+
+/*INPUT DEL BUSCADOR DE LOS TIPOS DE AREAS VERDES*/
 .input-colonia{
 	width: 40em;
 	height: 2.5em;
 	margin-bottom: .8em;
-	border: 0px;
+	border: 1px solid  #b0b4b7;
+	padding-left: 1em;
+	border-radius: 20px;
 
 }
+
+.input-colonia:focus{
+	background: #bee4df;
+	border: 1px solid #90cec6;
+	transition: .3s;
+}
+
 
 .input-mostrarlo{
 	width: 24em;
@@ -148,53 +172,85 @@
 	color: var(--botonletra-hover);
 }
 
+.boton-iniciarsesion{
+	width: 10em;
+	height: 2em;
+	font-size: 1em;
+	margin-bottom: .4em;
+	transition: transform .5s;
+}
+
+.boton-iniciarsesion:hover{
+	transform: translateX(-10%);
+}
+
+/*MENU DEL HEADER ABSOLUTE*/
 #menu-oculto{
 	position: absolute;
 	transform-origin: top center;
-	background: transparent;
+	background: var(--verdeheader);
 	transform: scale(1,0);
 	transition: transform .3s;
+	border: 1px solid #cebebe;
+	box-shadow: 2px 2px 2px #b8cbc3;
 }
 
+/*HAMBURGUESA HOVER MUESTRA EL MENU ABSOLUTE*/
 nav:hover >#menu-oculto{
 	transform: scale(1,1);
 }
-.submenu-oculto{
-	position: absolute;
-	display: none;
-	z-index: 4;
-}
 
+
+
+/*CADA LI DEL MENU OCULTO*/
 .menu-oculto li{
-	background-color:var(--verdeheader);
+	display: flex;
+	background-color: #d4ddd9;
 	color: var(--letracolor);
 	font-size: 1em;
 	padding: .6em;
 }
 
+/*HOVER DEL LI DEL MENU OCULTO*/
 .menu-oculto li:hover{
-	background-color:var(--verdeheader-hover);
+	background-color: var(--botoncolor);
 }
 
+/*COLOR DEL LOS ENLACES DE LOS LI DEL MENU OCULTO*/
 .menu-oculto li a{
 	color: var(--letracolor);
 
 }
 
-.submenu-oculto li{
-	background-color: var(--verdeheader);
-	color: var(--letracolor);
-	font-size: 1em;
-	padding: .6em;
-	margin-left: 5em;
-	width: 9em;
-}
-.submenu-oculto li:hover{
-	background-color: var(--verdeheader-hover);
+/*SUBMENU DEL MENU*/
+.submenu-oculto{
+	position: absolute;
+	display: none;
+	z-index: 4;
+	background: #d4ddd9;
+	left: 7em;
+	border: 1px solid #cebebe;
+	padding-top: .5em;
+	box-shadow: 2px 2px 2px #b8cbc3;
 }
 
+/*CADA LI DEL SUBMENU DEL MENU*/
+.submenu-oculto li{
+	background-color: #d4ddd9;
+	color: var(--letracolor);
+	font-size: 1em;
+	width: 13em;
+}
+
+/*HOVER DE LOS LI DEL SUBMENU OCULTO*/
+.submenu-oculto li:hover{
+	background-color: var(--botoncolor);
+}
+
+/*COLOR DE LOS ENLACES DEL LI DEL SUBMENU*/
 .submenu-oculto li a{
 	color: var(--letracolor);
+	padding-top: .3em;
 
 }
 
@@ -202,10 +258,12 @@ nav:hover >#menu-oculto{
 	display: block;
 }*/
 
+/*HOVER DE EXPLORAR ME ABRE EL SUBMENU*/
 #explorar:hover > .submenu-oculto{
 	display: block;
 }
 
+/*EL ICONO DE LUPA EN EL BUSCADOR DEL HEADER*/
 .buscar-colonia .boton-lupa{
 	margin-top: -2em;
 	margin-left: 1em;
@@ -215,11 +273,12 @@ nav:hover >#menu-oculto{
 	display: none;
 	position: absolute;
 }
+
 .hover-user{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	margin-right: : 2em;
+	margin-right: 2em;
 	width: 12em;
 	background: #f0f0f0;
 	height: 7em;
@@ -229,13 +288,17 @@ nav:hover >#menu-oculto{
 	border: 1px solid  #b3b6b7 ;
 }
 
-.liuno{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 2em;
+.hover-user li{
+	display: block;
+	margin-bottom: .5em;
+	width: 100%;
 
 }
+
+.hover-user .liuno{
+	display: flex;
+}
+
 
 /*
 #img-p:hover > #session-nav{
@@ -247,19 +310,24 @@ nav:hover >#menu-oculto{
 	position: absolute;
 	display: none;
 	margin-top: 2em;
-	margin-right: : 2em;
-	width: 18em;
+	margin-left: -2em;
+	width: 20em;
 	padding-bottom: -1em;
-	background: gray;
 	height: 20em;
 	text-align: center;
 	font-size: 1em;
 	padding: .1em;
-	background:#f0f0f0;
+	background:#e7eff0f0;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #c0c5c3;
 	box-shadow: 2px 2px 2px #93a59d;
+	border-radius: 20px;
+	transition: transform .4s;
+}
+
+#session-form:hover{
+	transform: scale(1.1);
 }
 
 
@@ -275,21 +343,30 @@ nav:hover >#menu-oculto{
 .log-in label{
 	display: flex;
 	justify-content: flex-start;
+	color: #e65555;
+	width: 8em;
 }
 #session-form [type="text"]{
-	height: 2em;
+	height: 2.5em;
 	border: 1px solid  #b0b4b7 ;
+	border-radius: 20px;
+	padding-left: 1em;
+	
 }
 
 
 #session-form [type="password"]{
-	height: 2em;
+	height: 2.5em;
 	border: 1px solid  #b0b4b7 ;
+	border-radius: 20px;
+	padding-left: 1em;
+
 }
 
 #session-form [type="password"]:focus, #session-form [type="text"]:focus{
 	background: #bee4df;
 	border: 1px solid #90cec6;
+	transition: .5s;
 }
 
 .imgheader{
@@ -305,8 +382,14 @@ nav:hover >#menu-oculto{
 	margin-right: .6em;
 	border: 1px solid #c6c4c4;
 }
+
+.headersesion article{
+	transition: transform .4s;
+}
+
 .headersesion article:hover{
 	background:#d9e0de;
+	transform: translateX(-10%);
 }
 .headersesion article::after{
 	content: '->';

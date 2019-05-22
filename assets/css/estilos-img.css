@@ -1,14 +1,29 @@
 
+/*DEFINO EL TAMANO DEL LOGO DEL HEADER*/
 .logo{
 	display: grid;
 	width: 13em;
 	margin-top: .4em;
 	margin-left: 1em;
+	margin-bottom: .4em;
+	transition: transform .5s;
+}
 
+.logo:hover{
+	transform: translateX(10%);
+	filter: blur(3px);
+}
+
+.buscaverde{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 40em;
 }
 
 .nav{
-	width: 2em;
+	width: 4em;
+	height: 2em;
 	padding-left: 1em;
 
 }
@@ -32,6 +47,12 @@
 
 .arbol{
 	width: 25em;
+	transition: transform .5s;
+}
+
+.arbol:hover{
+	transform: translateX(10%);
+	filter: blur(3px);
 }
 
 .tec{
@@ -52,16 +73,39 @@
 
 .buzon{
 	width: 7em;
+	transition: transform .4s;
 }
+.buzon:hover{
+	filter: blur(6px);
+	transform: translatex(10px);
+}
+
+
 .circulo{
 	background:white;
 	display: flex;
 	align-items:  var(--center);
 	margin:0px;
-	background: #ddd;
+	background: #9b9b9b00;
+
 }
 
 .letrero{
 	width: 24em;
+	transition: transform .4s;
+}
+.letrero:hover{
+	filter: blur(6px);
+	transform: translatex(10px);
 }
 
+.imgheader{
+	border-radius: 50px;
+	margin-right: .6em;
+	animation: App-logo-spin infinite 4s linear;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
