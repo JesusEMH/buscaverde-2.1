@@ -17,8 +17,8 @@
 .buscaverde{
 	display: flex;
 	justify-content: center;
-	align-content: center;
-	width: 40em;
+	align-items: center;
+	width: 30em;
 }
 
 .nav{
@@ -108,4 +108,8 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.comentario-avatar{
+	
 }

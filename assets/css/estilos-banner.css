@@ -118,6 +118,7 @@
 	grid-gap: 1em 1em;
 }
 
+
 /*GRID INDIVIDUAL DE LO DE ARRIBA*/
 .colonia-contenedor{
 	width: 19em;
@@ -220,4 +221,42 @@
   	grid-template-columns: 1fr 1fr 1fr;
   	grid-template-rows: 1fr;
   }
+}
+
+.info-banner{
+	grid-column: 1/span 3;
+	background: #ececbb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info-sub-banner{
+	grid-column: 1/span 3;
+	grid-row: 2/3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #4ee7a6;
+}
+
+.info-card{
+	background: #dbdbd3;
+	margin-top: 1em;
+	padding: 1em;
+	border-radius: 20px;
+
+}
+
+.info-card p{
+	font-size: 1em;
+}
+
+.info-card .titulo{
+	font-size: 1.4em;
+	height: 2em;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	color: #148d6f;
 }

@@ -4,7 +4,7 @@
 .todo{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows:1fr;
+	grid-template-rows: 1fr 7em;
 	font-family: 'Merriweather';
 }
 
@@ -36,6 +36,17 @@
 	display: grid;
 	grid-template-columns: .8fr 7fr .8fr;
 	grid-template-rows: 16em 1fr 8em;
+	min-height: 120vh;
+	font-family: 'Merriweather';
+	color: var(--colorletra);
+	margin-top: 4em;
+}
+
+.bodyinfo{
+	background-color: var(--fondosecundario);
+	display: grid;
+	grid-template-columns: .8fr 7fr .8fr;
+	grid-template-rows: 10em 2em 1fr 8em;
 	min-height: 120vh;
 	font-family: 'Merriweather';
 	color: var(--colorletra);
@@ -80,13 +91,13 @@
 /*ESTILOS DEL FOOTER*/
 .footer{
 	grid-column: 1/2;
-	grid-row: 3/4;
 	display: flex;
 	justify-content: var(--center);
 	align-items: var(--center);
 	background-color: #b0b4b4;
 	border: 1px solid #7b8181;
 	border-width: 1px 0px 0px 0px;
+	height: 7em;
 }
 
 /*ESTRUCTURA DEL BANNER PRINCIPAL*/
@@ -278,5 +289,25 @@
 	grid-template-columns:1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 1em;
+}
+
+.info-anuncio{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #e2ea8f;
+	height: 40vh;
+	margin-bottom: 3em;
+	font-size: 1.3em;
+	transition: transform .4s;
+	border-radius: 20px;
+}
+
+.info-anuncio a{
+	color: inherit;
+}
+.info-anuncio:hover{
+	text-decoration-line: underline;
+	transform: translatey(20px);
 }
 

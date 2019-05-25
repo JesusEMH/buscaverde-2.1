@@ -1,12 +1,13 @@
 /*LAYOUT DE ARTICULO.PHP*/
 .bodycuatro{
-	grid-row: 2/3;
+	grid-row: 1/2;
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: 1fr;
 	background: var(--fondosecundario);
 	margin-top: 4em;
 }
+
 /*CONTENIDO DE ARTICULO.PHP*/
 .main-articulo{
 	grid-column: 2/3;

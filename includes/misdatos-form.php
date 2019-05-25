@@ -35,5 +35,5 @@
 
 			<input class="boton" type="submit" name="registrado" value="ACTUALIZAR INFORMACION">
 		</form>
-	<?php endif; ?>
 	<?php borrarErrores(); ?>
+	<?php endif; ?>

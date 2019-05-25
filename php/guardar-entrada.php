@@ -37,26 +37,26 @@ if(isset($_POST)){
 		$errores['calle'] = 'La calle no es válida';
 	}
 	
-	if(empty($colonia) && !is_numeric($colonia)){
+	if(empty($colonia) || !is_numeric($colonia)){
 		$errores['colonia'] = 'La colonia no es válida';
 	}
 
-	if(empty($codigopostal) && !is_numeric($codigopostal)){
+	if(empty($codigopostal) || !is_numeric($codigopostal)){
 		$errores['codigopostal'] = 'El codigo postal no es válida';
 	}
 
-	if(empty($tipo) && !is_numeric($tipo)){
+	if(empty($tipo) || !is_numeric($tipo)){
 		$errores['tipo'] = 'El tipo de zona no es válida';
 	}
 
-	if(empty($arboles)  && is_numeric($arboles)){
+	if(empty($arboles) || is_numeric($arboles)){
 		$errores['arboles'] = 'El numero de arboles debe ser en texto';
 	}
 
 	if(empty($contacto) && !filter_var($email, FILTER_VALIDATE_EMAIL)){
 		$errores['contacto'] = 'El correo de contacto no es válido';
 	}
-	
+
 	if(count($errores) == 0){
 			$sql = "INSERT INTO areasverdes VALUES(null, $usuario, $tipo, $colonia, $codigopostal,  '$titulo', '$descripcion', '$calle', '$arboles', '$contacto', CURDATE());";
 		
@@ -67,12 +67,10 @@ if(isset($_POST)){
 
 		$_SESSION["errores_entrada"] = $errores;
 		
-		if(isset($_GET['editar'])){
-			header("Location: ../editar-entrada.php?id=".$_GET['editar']);
-		}else{
-			header("Location: ../crear-entrada.php");
-		}
+		header("Location: ../crear-entrada.php");
+		
 	}
 	
 }
+
 

@@ -20,7 +20,7 @@
 			?> 
 
 			<article>
-				<a class="articulo" href="articulo.php?id=<?=$_POST['id']?>">
+				<a class="articulo" href="articulo.php?id=<?=$entradacol['id']?>">
 				<h2 class="articulo-titulo radius"><?= $entradacol['nombre']?></h2>
 				<p class="articulo-parrafo radius"><?=substr($entradacol['descripcion'], 0, 100).' ...'?></p>
 				<p class="articulo-tipo radius"><?=$entradacol['tipo']?></p>
@@ -44,8 +44,8 @@
 </div>
 
 	<aside class="asideuno"></aside>
-	<main class="main">
-		<form class="buscar-colonia" method="POST" action="colonias.php">
+	<main id="agregados" class="main">
+		<form class="buscar-colonia" method="POST" action="colonias.php#agregados">
 			<input class="input-colonia" type="text" name="buscar">
 			<input class="boton-lupa" type="image" name="buscado" src="assets/img/lupa.png">
 		</form>

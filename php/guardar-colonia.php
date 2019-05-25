@@ -27,6 +27,6 @@ if(isset($_POST)){
 	
 }
 
-header("Location: ../colonias.php");
+header("Location: ../colonias.php#agregados");
 
 ?>

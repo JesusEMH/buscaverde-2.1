@@ -131,8 +131,9 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows:  5em 5em  1fr;
-	height: 55em;
+	height: 75em;
 	padding: 1em;
+
 }
 
 .feed-misdatos{
@@ -149,25 +150,26 @@
 	display: grid;
 	grid-template-columns: 6em .3fr 1fr;
 	grid-template-rows: 1fr .7fr;
-	background: #ddd;
+	background: transparent;
 	margin-bottom: 1.5em;
 	max-height: 11em;
 	align-items: center;
 	margin-left: 2em;
 	margin-right: 2em;
-	margin-bottom: .6em;
 	padding: .4em;
 	border-style: solid;
 	border-color: #ccbebe;
 	border-width: 1px;
 	border-radius: 8px;
 	transition: transform .4s;
+	margin-bottom: 1.3em;
 
 }
 
 .publicacion:nth-child(even){
-	background: #b7f8ba;
+	background: #e9e6d9;
 }
+
 
 .publicacion:hover{
 	transform: translateX(20px);
@@ -178,7 +180,28 @@
 	display: flex;
 	width: 3.8em;
 	padding-left: .4em;
+	padding-right: .4em;
+	background: #d5d3a8;
+	border-radius: 4px;
 
+}
+
+.publicacion-fecha{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.publicacion-nombre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #9ae9d2d6;
+	color: #383551;
+	border-radius: 20px;
+	font-size: 1.1em;
+	padding: .3em;
+	border: 1px solid #b7bae0;
 }
 
 .publicacion-textarea{
@@ -188,12 +211,11 @@
 
 }
 .img-publicacion{
-	background: #f3f0e7;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #c2b9b9;
+	background: transparent;
 	border-radius: 8px;
 	width: 4.8em;
+	display: flex;
+	justify-content: center;
 }
 .cuerpo-publicacion{
 	grid-column: 1/span 3;
@@ -237,7 +259,8 @@
 	grid-gap: 1em;
 	margin-bottom: 2em;
 	margin-top: 1em;
-	height: 80vh;
+	height: 50em;
+
 }
 
 .feed-input{
@@ -260,13 +283,7 @@
 	cursor: pointer;
 }
 
-.alerta{
-	background: red;
-}
 
-.alerta-exito{
-	background: #5de68a;
-}
 
 .asidetres {
 	display: grid;

@@ -24,5 +24,5 @@ if(isset($_POST)){
 	
 }
 
-header("Location: ../tipos.php");
+header("Location: ../tipos.php#agregados");
 ?>

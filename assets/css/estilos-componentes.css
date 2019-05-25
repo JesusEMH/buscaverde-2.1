@@ -84,11 +84,14 @@
 
 .alerta-error{
 	display: flex;
-	background:   #d98880  ;
-	border-style: solid;	
-	border-width: 1px;
-	border-color:  #cd6155 ;
+	background: tomato;
+	border: 1px solid #ea6151;
+	border-radius: 20px;
 
+}
+
+.alerta-exito{
+	background: green;
 }
 .boton{
 	background: var(--botoncolor);

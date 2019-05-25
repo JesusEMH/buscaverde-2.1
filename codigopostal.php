@@ -20,7 +20,7 @@
 		?> 
 
 			<article>
-				<a class="articulo" href="articulo.php?id=<?=$_GET['id']?>">
+				<a class="articulo" href="articulo.php?id=<?=$entradacp['id']?>">
 				<h2 class="articulo-titulo radius"><?= $entradacp['nombre']?></h2>
 				<p class="articulo-parrafo radius"><?=substr($entradacp['descripcion'], 0, 100).' ...'?></p>
 				<p class="articulo-tipo radius"><?=$entradacp['tipo']?></p>
@@ -44,8 +44,8 @@
 </div>
 
 	<aside class="asideuno"></aside>
-	<main class="main">
-		<form class="buscar-colonia" method="POST">
+	<main id="agregados" class="main">
+		<form class="buscar-colonia" method="POST" action="codigopostal.php#agregados">
 			<input class="input-colonia" type="text" name="buscar">
 			<input class="boton-lupa" type="image" src="assets/img/lupa.png">
 		</form>

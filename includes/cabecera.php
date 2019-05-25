@@ -28,7 +28,7 @@
 						<li><a href="index.php">INICIO</a></li>
 						<li><a href="info.php">INFO</a></li>					
 						<li><a href="mapa.php">MAPA</a></li>
-						<li><a href="comentarios.php">COMENTARIOS</a></li>
+						<li><a href="#">NO HAY NADA</a></li>
 						<li id="explorar">EXPLORAR
 							<ul class="submenu-oculto">
 								<li class="liuno"><a href="tipos.php">por tipo de lugar</a></li>
@@ -68,7 +68,7 @@
 						<li><a href="index.php">INICIO</a></li>
 						<li><a href="info.php">INFO</a></li>					
 						<li><a href="mapa.php">MAPA</a></li>
-						<li><a href="comentarios.php">COMENTARIOS</a></li>
+						<li><a href="#">NO HAY NADA</a></li>
 						<li id="explorar">EXPLORAR
 							<ul class="submenu-oculto">
 								<li class="liuno"><a href="tipos.php">por tipo de lugar</a></li>
@@ -102,6 +102,7 @@
 						<input class="boton" type="submit" name="logueate" value="LOGUEATE">
 						<p>Si no tienes una cuenta solicitale al usuario administrador.</p>
 					</form>
+				<?php borrarErrores(); ?>
 				</div>
 			
 		</div>

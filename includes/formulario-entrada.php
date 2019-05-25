@@ -1,9 +1,10 @@
+
 <?php if(isset($_SESSION['completado'])): ?>
 		<div class="alerta alerta-exito">
 		<?=$_SESSION['completado']?>
 		</div>
 		<?php elseif(isset($_SESSION['errores']['general'])): ?>
-		<div class="alerta alerta-error2">
+		<div class="alerta alerta-error">
 			<?=$_SESSION['errores']['general']?>
 		</div>
 		<?php endif; ?>
@@ -14,19 +15,18 @@
 
 			<label class="label-registro" for="nombre">NOMBRE: </label>
 			<input class="feed-input" type="text" name="nombre">
-			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : '' ; ?>
-
+			<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : '' ; ?>
 
 
 			<label class="label-registro" for="descripcion">DESCRIPCION: </label>
 			<input class="feed-input" type="text" name="descripcion">
-			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'descripcion') : '' ; ?>
+			<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'descripcion') : '' ; ?>
 
 
 
 			<label class="label-registro" for="calle">CALLE: </label>
 			<input class="feed-input" type="text" name="calle" >
-			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'calle') : '' ; ?>
+			<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'calle') : '' ; ?>
 
 			<label class="label-registro" for="colonia">COLONIA:</label>
 			<select class="feed-input" name="colonia">
@@ -84,13 +84,16 @@
 
 			<label class="label-registro" for="arboles">ARBOLES: </label>
 			<input class="feed-input" type="text" name="arboles" >
-			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'arboles') : '' ; ?>
+			<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'arboles') : '' ; ?>
 
 
 			<label class="label-registro" for="contacto">CONTACTO: </label>
 			<input class="feed-input" type="email" name="contacto" >
-			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'contacto') : '' ; ?>
+			<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'contacto') : '' ; ?>
 
 
 			<input class="boton" type="submit" name="registrado" value="INSERTAR AREA VERDE">
 		</form>
+
+
+		<?php borrarErrores(); ?>

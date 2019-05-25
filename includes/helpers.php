@@ -12,22 +12,30 @@ function borrarErrores(){
 	$borrado = false;
 
 	if(isset($_SESSION['errores'])){
-
 		$_SESSION['errores'] = null;
-		$borrado = session_unset($_SESSION['errores']);
-
-	}
-
-	if(isset($_SESSISON['completado'])){
-		$_SESSION['completado'] = null;
-		session_unset($_SESSION['completado']);
+		$borrado = true;
 	}
 	
+	if(isset($_SESSION['errores_entrada'])){
+		$_SESSION['errores_entrada'] = null;
+		$borrado = true;
+	}
+	
+	if(isset($_SESSION['completado'])){
+		$_SESSION['completado'] = null;
+		$borrado = true;
+	}
+
+	if(isset($_SESSION['error_login'])){
+		$_SESSION['error_login'] = null;
+		$borrado = true;
+	}
 	return $borrado;
 }
 
+
 function conseguirColonias($conexion){
-	$sql = "SELECT * FROM direccion ORDER BY id ASC;";
+	$sql = "SELECT * FROM direccion ORDER BY id DESC;";
 	$colonia = mysqli_query($conexion, $sql);
 
 	$result = array();
@@ -38,7 +46,7 @@ function conseguirColonias($conexion){
 }
 
 function conseguirCpostal($conexion){
-	$sql = "SELECT * FROM codigopostal ORDER BY id ASC;";
+	$sql = "SELECT * FROM codigopostal ORDER BY id DESC;";
 	$cpostal = mysqli_query($conexion, $sql);
 
 	$result = array();
@@ -49,7 +57,7 @@ function conseguirCpostal($conexion){
 }
 
 function conseguirTipo($conexion){
-	$sql = "SELECT * FROM tipo ORDER BY id ASC;";
+	$sql = "SELECT * FROM tipo ORDER BY id DESC;";
 	$tipo = mysqli_query($conexion, $sql);
 
 	$result = array();
@@ -74,7 +82,7 @@ function conseguirUsuario($conexion){
 function conseguirUltimasEntradas($conexion, $limit = null){
 	$sql = "SELECT a.*, t.tipo AS 'tipo' FROM areasverdes a ".
 			"INNER JOIN tipo t ON a.tipo_id = t.id ".
-			"ORDER BY t.id DESC ";
+			"ORDER BY a.id DESC ";
 
 	if ($limit) {
 		$sql .= "LIMIT 5";
@@ -106,7 +114,7 @@ function conseguirEntradasCpostal($conexion, $cpostalid){
 	$sql = "SELECT a.*, a.id AS 'ide', t.tipo AS 'tipo' FROM areasverdes a ".
 			"INNER JOIN tipo t ON a.tipo_id = t.id ".
 			"WHERE a.codigopostal_id = $cpostalid ".
-			"ORDER BY t.id DESC ";
+			"ORDER BY t.id ASC ";
 
 	$entradascp = mysqli_query($conexion, $sql);
 	
@@ -135,7 +143,7 @@ function conseguirEntradasTipo($conexion, $tip){
 	$sql = "SELECT a.*, t.tipo AS 'tipo' FROM areasverdes a ".
 			"INNER JOIN tipo t ON a.tipo_id = t.id ".
 			"WHERE a.tipo_id = $tip ".
-			"ORDER BY t.id DESC ";
+			"ORDER BY t.id ASC ";
 
 	$entradastip = mysqli_query($conexion, $sql);
 	

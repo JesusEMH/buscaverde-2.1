@@ -8,5 +8,5 @@ if(isset($_SESSION['usuario']) && isset($_GET['id'])){
 	$borrar = mysqli_query($db, $sql);
 }
 
-header("Location: ../colonias.php");
+header("Location: ../colonias.php#agregados");
 ?>

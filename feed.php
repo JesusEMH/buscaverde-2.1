@@ -38,9 +38,9 @@
 				
 
 		?> <div class="publicacion">
-				<p class="img-publicacion"><img class="comentario-avatar" src="assets/svg/user-img.svg"></p>
-				<p><?=$comentarioYa['usuario']?> <?=$comentarioYa['apellido']?></p>
-				<p><?=$comentarioYa['fecha']?></p>
+				<p class="img-publicacion"><img src="assets/svg/user-img.svg"></p>
+				<p class="publicacion-nombre"><?=$comentarioYa['usuario']?> <?=$comentarioYa['apellido']?></p>
+				<p class="publicacion-fecha"><?=$comentarioYa['fecha']?></p>
 				<p class="cuerpo-publicacion"><?=$comentarioYa['comentario']?></p>
 				</p>
 			</div>

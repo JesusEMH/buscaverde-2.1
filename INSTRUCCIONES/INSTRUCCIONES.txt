@@ -1,0 +1,1 @@
+Es importante primero crear la base de datos que esta en la carpeta base-de-datos, solo hay que copiar toda la base de datos y pegarla en PHP my admin para que la pagina funcione, la base de datos viene con informacion por defecto, asi como con un usuario por defecto y algunos datos por defecto ya agregados.

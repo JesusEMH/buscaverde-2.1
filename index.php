@@ -71,6 +71,10 @@
 			</article>
 
 		</div>
+
+		<article class="info-anuncio">
+			<a href="./info.php">INFORMATE MAS SOBRE EL USO DE ESTE SISTEMA! CLICK AQUI!</a>
+		</article>
 	</main>
 	<aside class="asidedos"></aside>
 </div>

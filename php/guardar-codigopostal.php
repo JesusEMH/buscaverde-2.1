@@ -24,5 +24,5 @@ if(isset($_POST)){
 	
 }
 
-header("Location: ../codigopostal.php");
+header("Location: ../codigopostal.php#agregados");
 ?>
