@@ -78,10 +78,10 @@ CONSTRAINT fk_usuarioscomentario_id FOREIGN KEY(usuarios_id) REFERENCES usuarios
 )ENGINE=innoDB;
 
 
-INSERT INTO usuarios VALUES(null, 'juan', 'perez', 'juan@perez.com', 'administrador', CURDATE());
-INSERT INTO usuarios VALUES(null, 'luis', 'sanchez', 'luis@sanchez.com', 'administrador', CURDATE());
-INSERT INTO usuarios VALUES(null, 'antonio', 'lujan', 'antonio@lujan.com', 'administrador', CURDATE());
-INSERT INTO usuarios VALUES(null, 'jose', 'lozano', 'jose@lozano.com', 'administrador', CURDATE());
+INSERT INTO usuarios VALUES(null, 'juan', 'perez', 'juan@perez.com', '$2y$04$ATOZz2neWvoB0MFA/lOZjeRnxDkMZIdJt0xthqsdaapvYwFLr8lO.', CURDATE());
+INSERT INTO usuarios VALUES(null, 'luis', 'sanchez', 'luis@sanchez.com', '$2y$04$ATOZz2neWvoB0MFA/lOZjeRnxDkMZIdJt0xthqsdaapvYwFLr8lO.', CURDATE());
+INSERT INTO usuarios VALUES(null, 'antonio', 'lujan', 'antonio@lujan.com', '$2y$04$ATOZz2neWvoB0MFA/lOZjeRnxDkMZIdJt0xthqsdaapvYwFLr8lO.', CURDATE());
+INSERT INTO usuarios VALUES(null, 'jose', 'lozano', 'jose@lozano.com', '$2y$04$ATOZz2neWvoB0MFA/lOZjeRnxDkMZIdJt0xthqsdaapvYwFLr8lO.', CURDATE());
 
 INSERT INTO tipo VALUES(null, 'terreno');
 INSERT INTO tipo VALUES(null, 'parque');
